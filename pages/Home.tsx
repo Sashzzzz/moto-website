@@ -74,11 +74,11 @@ export const Home: React.FC = () => {
   return (
     <div className="animate-fadeIn">
       {/* Hero Section - Split Layout */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-darkGray pt-20">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-darkGray pt-20 pb-16 md:pb-0">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Text Content */}
-            <div className="order-2 lg:order-1">
+            <div className="order-1 lg:order-1">
               <div className="flex items-center gap-2 mb-4 animate-slideInLeft">
                 <div className="h-[2px] w-8 md:w-12 bg-primary shrink-0 shadow-sm"></div>
                 <span className="text-primary font-bold tracking-widest uppercase text-lg sm:text-xl md:text-2xl whitespace-nowrap">Welcome to MoTo</span>
@@ -102,7 +102,7 @@ export const Home: React.FC = () => {
 
             {/* Right Side - Image Carousel */}
             <div
-              className="order-1 lg:order-2 flex justify-center lg:justify-end"
+              className="order-2 lg:order-2 flex justify-center lg:justify-end"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
@@ -209,12 +209,12 @@ export const Home: React.FC = () => {
                 className="bg-black rounded-sm shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-800 block"
               >
                 {/* Category Image */}
-                <div className="relative overflow-hidden h-48 bg-darkGray flex items-center justify-center">
+                <div className="relative overflow-hidden h-56 md:h-48 bg-darkGray flex items-center justify-center">
                   {category.image ? (
                     <img
                       src={category.image}
                       alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
                     categoryIcons[category.id]

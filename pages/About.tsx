@@ -20,14 +20,14 @@ export const About: React.FC = () => {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-             <div className="relative group">
+             <div className="relative group order-2 md:order-1">
                <img
                  src="/Images/About/storeimageabout.webp"
                  alt="MoTo Store Interior"
                  className="w-full rounded-sm shadow-lg transition-transform duration-700 group-hover:scale-105"
                />
              </div>
-             <div>
+             <div className="order-1 md:order-2">
                <h2 className="text-4xl font-heading font-bold text-black mb-4">WHO WE <span className="text-primary">ARE</span></h2>
                <h3 className="text-xl font-bold mb-6 uppercase text-black">YOUR ONE-STOP ELECTRONICS DESTINATION</h3>
                <p className="text-gray-600 mb-4 leading-relaxed">

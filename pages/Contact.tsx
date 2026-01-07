@@ -37,7 +37,7 @@ export const Contact: React.FC = () => {
       <div className="bg-darkGray py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-4">CONTACT <span className="text-primary">US</span></h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-300 mx-auto text-lg whitespace-nowrap">
             Visit our stores or send us a message. We're here to help you find what you need.
           </p>
         </div>
