@@ -150,12 +150,18 @@ export const Home: React.FC = () => {
                     </div>
                   ))}
 
-                  {/* Label Badge */}
-                  <div className="absolute bottom-2 md:bottom-6 left-2 md:left-6 bg-primary px-3 md:px-4 py-1.5 md:py-2 rounded-sm z-10">
-                    <span className="font-bold text-black text-xs md:text-sm uppercase tracking-wide">
+                  {/* Label Badge - inside container on desktop, outside on mobile */}
+                  <div className="absolute bottom-6 left-6 bg-primary px-4 py-2 rounded-sm z-10 hidden md:block">
+                    <span className="font-bold text-black text-sm uppercase tracking-wide">
                       {HERO_CAROUSEL_SLIDES[currentSlide].label}
                     </span>
                   </div>
+                </div>
+                {/* Mobile Label Badge - outside carousel */}
+                <div className="bg-primary px-3 py-1.5 rounded-sm mt-3 inline-block md:hidden">
+                  <span className="font-bold text-black text-xs uppercase tracking-wide">
+                    {HERO_CAROUSEL_SLIDES[currentSlide].label}
+                  </span>
                 </div>
 
                 {/* Dot Indicators */}
@@ -284,14 +290,14 @@ export const Home: React.FC = () => {
               <h2 className="text-4xl font-heading font-bold text-black mb-4">OUR <span className="text-primary">STORY</span></h2>
               <h3 className="text-xl font-bold mb-4 md:mb-6 uppercase text-black">10 YEARS OF TRUST SINCE 2015</h3>
               {/* Mobile Store Image - shown only on mobile, after title/subtitle */}
-              <div className="relative group md:hidden mb-6">
+              <div className="md:hidden mb-6">
                 <img
                   src="/Images/Home/storeimagehome.webp"
                   alt="MoTo Store"
                   className="w-full rounded-sm shadow-lg"
                 />
               </div>
-              <p className="text-gray-600 mb-4 leading-relaxed hidden md:block">
+              <p className="text-gray-600 mb-4 leading-relaxed">
                 In 2015, MoTo Company Limited opened its doors in Aungban Town with one goal: give customers a place they could trust for genuine electronics. From day one, we focused on authentic products, honest prices, and building trust through reliable service.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">

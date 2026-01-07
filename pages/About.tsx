@@ -32,7 +32,7 @@ export const About: React.FC = () => {
                <h2 className="text-4xl font-heading font-bold text-black mb-4">WHO WE <span className="text-primary">ARE</span></h2>
                <h3 className="text-xl font-bold mb-4 md:mb-6 uppercase text-black">YOUR ONE-STOP ELECTRONICS DESTINATION</h3>
                {/* Mobile image - shown only on mobile, after title/subtitle */}
-               <div className="relative group md:hidden mb-6">
+               <div className="md:hidden mb-6">
                  <img
                    src="/Images/About/storeimageabout.webp"
                    alt="MoTo Store Interior"
