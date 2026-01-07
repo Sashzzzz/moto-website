@@ -19,17 +19,26 @@ export const About: React.FC = () => {
       {/* Company Overview - Who We Are */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-             <div className="relative group order-2 md:order-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+             {/* Desktop image - hidden on mobile */}
+             <div className="relative group hidden md:block">
                <img
                  src="/Images/About/storeimageabout.webp"
                  alt="MoTo Store Interior"
                  className="w-full rounded-sm shadow-lg transition-transform duration-700 group-hover:scale-105"
                />
              </div>
-             <div className="order-1 md:order-2">
+             <div>
                <h2 className="text-4xl font-heading font-bold text-black mb-4">WHO WE <span className="text-primary">ARE</span></h2>
-               <h3 className="text-xl font-bold mb-6 uppercase text-black">YOUR ONE-STOP ELECTRONICS DESTINATION</h3>
+               <h3 className="text-xl font-bold mb-4 md:mb-6 uppercase text-black">YOUR ONE-STOP ELECTRONICS DESTINATION</h3>
+               {/* Mobile image - shown only on mobile, after title/subtitle */}
+               <div className="relative group md:hidden mb-6">
+                 <img
+                   src="/Images/About/storeimageabout.webp"
+                   alt="MoTo Store Interior"
+                   className="w-full rounded-sm shadow-lg"
+                 />
+               </div>
                <p className="text-gray-600 mb-4 leading-relaxed">
                  MoTo Company Limited is one of Myanmar's trusted names in electronics retail. Based in Aungban Town, we've built our reputation on a simple promise: genuine products, fair prices, and service you can count on.
                </p>

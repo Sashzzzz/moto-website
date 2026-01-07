@@ -78,7 +78,7 @@ export const Home: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Text Content */}
-            <div className="order-1 lg:order-1">
+            <div className="order-1 lg:order-1 mt-8 md:mt-0">
               <div className="flex items-center gap-2 mb-4 animate-slideInLeft">
                 <div className="h-[2px] w-8 md:w-12 bg-primary shrink-0 shadow-sm"></div>
                 <span className="text-primary font-bold tracking-widest uppercase text-lg sm:text-xl md:text-2xl whitespace-nowrap">Welcome to MoTo</span>
@@ -151,8 +151,8 @@ export const Home: React.FC = () => {
                   ))}
 
                   {/* Label Badge */}
-                  <div className="absolute bottom-6 left-6 bg-primary px-4 py-2 rounded-sm z-10">
-                    <span className="font-bold text-black text-sm uppercase tracking-wide">
+                  <div className="absolute bottom-2 md:bottom-6 left-2 md:left-6 bg-primary px-3 md:px-4 py-1.5 md:py-2 rounded-sm z-10">
+                    <span className="font-bold text-black text-xs md:text-sm uppercase tracking-wide">
                       {HERO_CAROUSEL_SLIDES[currentSlide].label}
                     </span>
                   </div>
@@ -271,9 +271,9 @@ export const Home: React.FC = () => {
       {/* Our Story Snippet */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Store Image */}
-            <div className="relative group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Desktop Store Image - hidden on mobile */}
+            <div className="relative group hidden md:block">
               <img
                 src="/Images/Home/storeimagehome.webp"
                 alt="MoTo Store"
@@ -282,8 +282,16 @@ export const Home: React.FC = () => {
             </div>
             <div>
               <h2 className="text-4xl font-heading font-bold text-black mb-4">OUR <span className="text-primary">STORY</span></h2>
-              <h3 className="text-xl font-bold mb-6 uppercase text-black">10 YEARS OF TRUST SINCE 2015</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
+              <h3 className="text-xl font-bold mb-4 md:mb-6 uppercase text-black">10 YEARS OF TRUST SINCE 2015</h3>
+              {/* Mobile Store Image - shown only on mobile, after title/subtitle */}
+              <div className="relative group md:hidden mb-6">
+                <img
+                  src="/Images/Home/storeimagehome.webp"
+                  alt="MoTo Store"
+                  className="w-full rounded-sm shadow-lg"
+                />
+              </div>
+              <p className="text-gray-600 mb-4 leading-relaxed hidden md:block">
                 In 2015, MoTo Company Limited opened its doors in Aungban Town with one goal: give customers a place they could trust for genuine electronics. From day one, we focused on authentic products, honest prices, and building trust through reliable service.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
