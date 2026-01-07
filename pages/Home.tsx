@@ -150,16 +150,10 @@ export const Home: React.FC = () => {
                     </div>
                   ))}
 
-                  {/* Label Badge - inside container on desktop, outside on mobile */}
-                  <div className="absolute bottom-6 left-6 bg-primary px-4 py-2 rounded-sm z-10 hidden md:block">
-                    <span className="font-bold text-black text-sm uppercase tracking-wide">
-                      {HERO_CAROUSEL_SLIDES[currentSlide].label}
-                    </span>
                   </div>
-                </div>
-                {/* Mobile Label Badge - outside carousel */}
-                <div className="bg-primary px-3 py-1.5 rounded-sm mt-3 inline-block md:hidden">
-                  <span className="font-bold text-black text-xs uppercase tracking-wide">
+                {/* Label Badge - outside carousel */}
+                <div className="bg-primary px-3 md:px-4 py-1.5 md:py-2 rounded-sm mt-3 inline-block">
+                  <span className="font-bold text-black text-xs md:text-sm uppercase tracking-wide">
                     {HERO_CAROUSEL_SLIDES[currentSlide].label}
                   </span>
                 </div>
